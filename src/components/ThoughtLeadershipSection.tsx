@@ -7,22 +7,26 @@ const ThoughtLeadershipSection = () => {
     {
       title: "Exploring A Career in Product Management",
       platform: "PluralSight",
-      icon: <BookOpen className="w-5 h-5" />
+      icon: <BookOpen className="w-5 h-5" />,
+      url: "https://www.pluralsight.com/courses/exploring-career-product-management"
     },
     {
       title: "Serving in Agile Teams",
       platform: "PluralSight", 
-      icon: <Users className="w-5 h-5" />
+      icon: <Users className="w-5 h-5" />,
+      url: "https://www.pluralsight.com/courses/serving-agile-teams"
     },
     {
       title: "Product Management as It Is",
       platform: "Educative.io",
-      icon: <BookOpen className="w-5 h-5" />
+      icon: <BookOpen className="w-5 h-5" />,
+      url: "https://www.educative.io/courses/product-management-as-it-is"
     },
     {
       title: "What to Expect from Product Management",
       platform: "TechLeadersLaunchpad.com",
-      icon: <BookOpen className="w-5 h-5" />
+      icon: <BookOpen className="w-5 h-5" />,
+      url: "https://techleaderslaunchpad.com/courses/what-to-expect-from-product-management"
     }
   ];
 
@@ -70,7 +74,11 @@ const ThoughtLeadershipSection = () => {
               
               <div className="space-y-4">
                 {courses.map((course, index) => (
-                  <Card key={index} className="hover-scale bg-gradient-card border-0 shadow-primary">
+                  <Card 
+                    key={index} 
+                    className="hover-scale bg-gradient-card border-0 shadow-primary cursor-pointer transition-all duration-200 hover:shadow-accent"
+                    onClick={() => window.open(course.url, '_blank', 'noopener,noreferrer')}
+                  >
                     <CardContent className="p-6">
                       <div className="flex items-start gap-4">
                         <div className="p-2 bg-primary/10 rounded-lg text-primary">
@@ -84,7 +92,7 @@ const ThoughtLeadershipSection = () => {
                             {course.platform}
                           </Badge>
                         </div>
-                        <ExternalLink className="w-4 h-4 text-muted-foreground" />
+                        <ExternalLink className="w-4 h-4 text-muted-foreground hover:text-primary transition-colors" />
                       </div>
                     </CardContent>
                   </Card>
