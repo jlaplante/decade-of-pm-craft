@@ -58,9 +58,9 @@ const HeroSection = () => {
                 
                 <Button 
                   onClick={scrollToExperience}
-                  variant="ghost" 
+                  variant="outline" 
                   size="lg"
-                  className="bg-transparent border border-white/30 text-white hover:bg-white/10 hover:border-white/50 px-8 py-3 text-lg"
+                  className="border-white/30 text-white hover:bg-white/10 hover:border-white/50 px-8 py-3 text-lg"
                 >
                   View Experience
                   <ArrowDown className="w-5 h-5 ml-2" />
@@ -68,13 +68,13 @@ const HeroSection = () => {
               </div>
 
               <div className="flex items-center gap-6 pt-4">
-                <a 
+                <!--a 
                   href="mailto:jon.laplante@jonlaplante.com"
                   className="text-white/70 hover:text-white transition-colors hover-scale"
                   aria-label="Email Jon La Plante"
                 >
                   <Mail className="w-6 h-6" />
-                </a>
+                </a-->
                 <a 
                   href="https://linkedin.com/in/jonlaplante"
                   target="_blank"
