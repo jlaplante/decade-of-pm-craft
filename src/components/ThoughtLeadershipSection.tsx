@@ -8,19 +8,19 @@ const ThoughtLeadershipSection = () => {
       title: "Exploring A Career in Product Management",
       platform: "PluralSight",
       icon: <BookOpen className="w-5 h-5" />,
-      url: "https://www.pluralsight.com/courses/exploring-career-product-management"
+      url: "https://www.pluralsight.com/courses/exploring-product-management-career"
     },
     {
       title: "Serving in Agile Teams",
       platform: "PluralSight", 
       icon: <Users className="w-5 h-5" />,
-      url: "https://www.pluralsight.com/courses/serving-agile-teams"
+      url: "https://www.pluralsight.com/courses/serving-on-agile-teams"
     },
     {
       title: "Product Management as It Is",
       platform: "Educative.io",
       icon: <BookOpen className="w-5 h-5" />,
-      url: "https://www.educative.io/courses/product-management-as-it-is"
+      url: "https://www.educative.io/courses/product-management-essentials-in-agile-environments"
     },
     {
       title: "What to Expect from Product Management",
