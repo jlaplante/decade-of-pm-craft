@@ -31,9 +31,20 @@ const HeroSection = () => {
                   <span>Prague, Czechia</span>
                 </div>
                 
-                <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-                  Jon La Plante
-                </h1>
+                <div className="flex items-center gap-4">
+                  <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
+                    Jon La Plante
+                  </h1>
+                  <a 
+                    href="https://linkedin.com/in/jonlaplante"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white/70 hover:text-white transition-colors hover-scale"
+                    aria-label="Jon La Plante on LinkedIn"
+                  >
+                    <Linkedin className="w-8 h-8" />
+                  </a>
+                </div>
                 
                 <h2 className="text-2xl lg:text-3xl font-light text-white/90">
                   AI-First Product Leader & Manager
@@ -65,18 +76,6 @@ const HeroSection = () => {
                   View Experience
                   <ArrowDown className="w-5 h-5 ml-2" />
                 </Button>
-              </div>
-
-              <div className="flex items-center gap-6 pt-4">
-                <a 
-                  href="https://linkedin.com/in/jonlaplante"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white/70 hover:text-white transition-colors hover-scale"
-                  aria-label="Jon La Plante on LinkedIn"
-                >
-                  <Linkedin className="w-6 h-6" />
-                </a>
               </div>
             </div>
 
