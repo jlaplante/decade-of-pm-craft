@@ -1,11 +1,23 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { TrendingUp, Users, Zap, Award, MapPin, Calendar } from "lucide-react";
+import CompanyDetailModal from "@/components/CompanyDetailModal";
+import { companyData, detailedRoles } from "@/data/companyData";
 
 const ExperienceSection = () => {
+  const [selectedExperience, setSelectedExperience] = useState<string | null>(null);
+
+  const handleCardClick = (experienceId: string) => {
+    setSelectedExperience(experienceId);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedExperience(null);
+  };
   const experiences = [
     {
-      id: 1,
+      id: "2-hour-learning",
       company: "2 Hour Learning",
       role: "AI-First Senior Product Manager",
       period: "Nov 2024 – Jul 2025",
@@ -22,7 +34,7 @@ const ExperienceSection = () => {
       gradient: "bg-gradient-primary"
     },
     {
-      id: 2,
+      id: "accionlabs-veracode",
       company: "AccionLabs + Veracode",
       role: "Senior Technical Product Manager",
       period: "March 2023 – October 2024",
@@ -39,7 +51,7 @@ const ExperienceSection = () => {
       gradient: "bg-gradient-accent"
     },
     {
-      id: 3,
+      id: "msd",
       company: "MSD",
       role: "Senior Product Manager",
       period: "January 2018 – November 2020", 
@@ -60,7 +72,7 @@ const ExperienceSection = () => {
       gradient: "bg-gradient-primary"
     },
     {
-      id: 4,
+      id: "everli",
       company: "Everli",
       role: "Senior Product Manager, Retail + Catalogue",
       period: "November 2021 – March 2023",
@@ -98,8 +110,9 @@ const ExperienceSection = () => {
             {experiences.map((exp, index) => (
               <Card 
                 key={exp.id} 
-                className="overflow-hidden hover-scale bg-gradient-card border-0 shadow-primary animate-fade-in"
+                className="overflow-hidden hover-scale bg-gradient-card border-0 shadow-primary animate-fade-in cursor-pointer transition-all duration-200 hover:shadow-accent"
                 style={{ animationDelay: `${index * 0.1}s` }}
+                onClick={() => handleCardClick(exp.id)}
               >
                 <CardContent className="p-8">
                   <div className="grid lg:grid-cols-4 gap-8">
@@ -113,6 +126,9 @@ const ExperienceSection = () => {
                           <div className="flex items-center gap-3 mb-2">
                             <Badge variant="secondary" className="font-medium">
                               {exp.type}
+                            </Badge>
+                            <Badge variant="outline" className="text-xs bg-accent/10 text-accent border-accent/20">
+                              Click for details
                             </Badge>
                           </div>
                           <h3 className="text-2xl font-bold text-foreground mb-1">
@@ -181,6 +197,14 @@ const ExperienceSection = () => {
               </Card>
             ))}
           </div>
+
+          {/* Company Detail Modal */}
+          <CompanyDetailModal
+            isOpen={selectedExperience !== null}
+            onClose={handleCloseModal}
+            company={selectedExperience ? companyData[selectedExperience] : null}
+            role={selectedExperience ? detailedRoles[selectedExperience] : null}
+          />
         </div>
       </div>
     </section>
