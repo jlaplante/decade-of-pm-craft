@@ -58,9 +58,9 @@ const HeroSection = () => {
                 
                 <Button 
                   onClick={scrollToExperience}
-                  variant="outline" 
+                  variant="ghost" 
                   size="lg"
-                  className="border-white/30 text-white hover:bg-white/10 hover:border-white/50 px-8 py-3 text-lg"
+                  className="bg-transparent border border-white/30 text-white hover:bg-white/10 hover:border-white/50 px-8 py-3 text-lg"
                 >
                   View Experience
                   <ArrowDown className="w-5 h-5 ml-2" />
