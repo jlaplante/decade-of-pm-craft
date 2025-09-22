@@ -138,9 +138,9 @@ const ThoughtLeadershipSection = () => {
             </div>
           </div>
 
-          {/* Skills & Certifications */}
+          {/* Skills */}
           <div className="mt-16 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-            <h3 className="text-2xl font-bold mb-8 text-center">Skills & Certifications</h3>
+            <h3 className="text-2xl font-bold mb-8 text-center">Core Skills</h3>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <Card className="hover-scale bg-gradient-card border-0 shadow-primary">
@@ -169,12 +169,12 @@ const ThoughtLeadershipSection = () => {
 
               <Card className="hover-scale bg-gradient-card border-0 shadow-primary">
                 <CardContent className="p-6 text-center">
-                  <h4 className="font-semibold mb-3">Technical</h4>
+                  <h4 className="font-semibold mb-3">Technical Skills</h4>
                   <div className="space-y-2 text-sm text-muted-foreground">
-                    <div>AWS Certified</div>
                     <div>SQL & Databases</div>
                     <div>Ruby on Rails</div>
                     <div>JavaScript/Node.js</div>
+                    <div>API Development</div>
                   </div>
                 </CardContent>
               </Card>
@@ -187,6 +187,43 @@ const ThoughtLeadershipSection = () => {
                     <div>Team Mentoring</div>
                     <div>Data Analysis</div>
                     <div>Strategic Planning</div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Certifications */}
+          <div className="mt-16 animate-fade-in" style={{ animationDelay: '0.8s' }}>
+            <h3 className="text-2xl font-bold mb-8 text-center">Certifications</h3>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              <Card className="hover-scale bg-gradient-card border-0 shadow-accent">
+                <CardContent className="p-6 text-center">
+                  <h4 className="font-semibold mb-3">AWS Certified</h4>
+                  <div className="space-y-2 text-sm text-muted-foreground">
+                    <div>Cloud Practitioner</div>
+                    <div>Solutions Architect</div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="hover-scale bg-gradient-card border-0 shadow-accent">
+                <CardContent className="p-6 text-center">
+                  <h4 className="font-semibold mb-3">Product Management</h4>
+                  <div className="space-y-2 text-sm text-muted-foreground">
+                    <div>Certified Scrum Master</div>
+                    <div>Agile Product Owner</div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="hover-scale bg-gradient-card border-0 shadow-accent">
+                <CardContent className="p-6 text-center">
+                  <h4 className="font-semibold mb-3">Education</h4>
+                  <div className="space-y-2 text-sm text-muted-foreground">
+                    <div>Course Instructor</div>
+                    <div>Content Creator</div>
                   </div>
                 </CardContent>
               </Card>
