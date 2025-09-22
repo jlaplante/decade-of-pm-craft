@@ -68,13 +68,6 @@ const HeroSection = () => {
               </div>
 
               <div className="flex items-center gap-6 pt-4">
-                <!--a 
-                  href="mailto:jon.laplante@jonlaplante.com"
-                  className="text-white/70 hover:text-white transition-colors hover-scale"
-                  aria-label="Email Jon La Plante"
-                >
-                  <Mail className="w-6 h-6" />
-                </a-->
                 <a 
                   href="https://linkedin.com/in/jonlaplante"
                   target="_blank"
