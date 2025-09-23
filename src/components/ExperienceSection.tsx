@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { TrendingUp, Users, Zap, Award, MapPin, Calendar } from "lucide-react";
+import { TrendingUp, Users, Zap, Award, MapPin, Calendar, ExternalLink } from "lucide-react";
 import CompanyDetailModal from "@/components/CompanyDetailModal";
 import { companyData, detailedRoles } from "@/data/companyData";
 
@@ -106,9 +106,13 @@ const ExperienceSection = () => {
             {experiences.map((exp, index) => (
               <Card 
                 key={exp.id} 
-                className="overflow-hidden hover-lift cursor-pointer border-border bg-card shadow-elegant"
+                className="overflow-hidden hover-lift cursor-pointer border-border bg-card shadow-elegant relative"
                 onClick={() => handleCardClick(exp.id)}
               >
+                {/* Click indicator icon */}
+                <div className="absolute top-4 right-4 z-10">
+                  <ExternalLink className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors" />
+                </div>
                 <CardContent className="p-8">
                   <div className="grid lg:grid-cols-4 gap-8">
                     {/* Company & Role Info */}
