@@ -12,8 +12,12 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-background">
-      <div className="container mx-auto px-6">
+    <section className="min-h-screen flex items-center justify-center bg-background relative">
+      {/* Subtle accent decoration */}
+      <div className="absolute top-20 right-20 w-32 h-32 bg-accent rounded-full opacity-60"></div>
+      <div className="absolute bottom-32 left-32 w-20 h-20 bg-primary/10 rounded-full"></div>
+      
+      <div className="container mx-auto px-6 relative">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Content */}
@@ -75,10 +79,11 @@ const HeroSection = () => {
             {/* Portrait */}
             <div className="relative">
               <div className="relative max-w-md mx-auto">
+                <div className="absolute -inset-4 bg-accent rounded-lg opacity-20"></div>
                 <img 
                   src={heroPortrait} 
                   alt="Jon La Plante - Product Manager"
-                  className="w-full rounded-lg shadow-sm hover-lift"
+                  className="relative w-full rounded-lg shadow-elegant hover-lift"
                 />
               </div>
             </div>

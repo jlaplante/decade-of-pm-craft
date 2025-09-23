@@ -66,7 +66,7 @@ const ThoughtLeadershipSection = () => {
             {/* Courses */}
             <div>
               <div className="flex items-center gap-3 mb-8">
-                <div className="p-2 bg-primary/10 rounded-lg text-primary">
+                <div className="p-2 bg-accent accent-glow rounded-lg text-primary">
                   <BookOpen className="w-5 h-5" />
                 </div>
                 <h3 className="text-xl font-semibold">Courses Authored</h3>
@@ -76,7 +76,7 @@ const ThoughtLeadershipSection = () => {
                 {courses.map((course, index) => (
                   <Card 
                     key={index} 
-                    className="hover-lift cursor-pointer border-border bg-card"
+                    className="hover-lift cursor-pointer border-border bg-card shadow-elegant"
                     onClick={() => window.open(course.url, '_blank', 'noopener,noreferrer')}
                   >
                     <CardContent className="p-4">
@@ -103,7 +103,7 @@ const ThoughtLeadershipSection = () => {
             {/* Speaking */}
             <div>
               <div className="flex items-center gap-3 mb-8">
-                <div className="p-2 bg-primary/10 rounded-lg text-primary">
+                <div className="p-2 bg-accent accent-glow rounded-lg text-primary">
                   <Mic className="w-5 h-5" />
                 </div>
                 <h3 className="text-xl font-semibold">Conference Speaking</h3>
@@ -111,11 +111,11 @@ const ThoughtLeadershipSection = () => {
               
               <div className="space-y-3">
                 {speaking.map((event, index) => (
-                  <Card key={index} className="hover-lift border-border bg-card">
+                  <Card key={index} className="hover-lift border-border bg-card shadow-elegant">
                     <CardContent className="p-4">
                       <div className="flex items-start justify-between">
                         <div className="flex items-start gap-3">
-                          <div className="p-2 bg-primary/10 rounded-lg text-primary">
+                          <div className="p-2 bg-accent accent-glow rounded-lg text-primary">
                             <Mic className="w-4 h-4" />
                           </div>
                           <div>
@@ -143,7 +143,7 @@ const ThoughtLeadershipSection = () => {
             <h3 className="text-xl font-semibold mb-8 text-center">Core Skills</h3>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-              <Card className="hover-lift border-border bg-card">
+              <Card className="hover-lift border-border bg-card shadow-elegant accent-glow">
                 <CardContent className="p-4 text-center">
                   <h4 className="font-medium mb-3">AI & Development</h4>
                   <div className="space-y-1 text-sm text-muted-foreground">
@@ -155,7 +155,7 @@ const ThoughtLeadershipSection = () => {
                 </CardContent>
               </Card>
 
-              <Card className="hover-lift border-border bg-card">
+              <Card className="hover-lift border-border bg-card shadow-elegant">
                 <CardContent className="p-4 text-center">
                   <h4 className="font-medium mb-3">Product Management</h4>
                   <div className="space-y-1 text-sm text-muted-foreground">
@@ -167,7 +167,7 @@ const ThoughtLeadershipSection = () => {
                 </CardContent>
               </Card>
 
-              <Card className="hover-lift border-border bg-card">
+              <Card className="hover-lift border-border bg-card shadow-elegant">
                 <CardContent className="p-4 text-center">
                   <h4 className="font-medium mb-3">Technical Skills</h4>
                   <div className="space-y-1 text-sm text-muted-foreground">
@@ -179,7 +179,7 @@ const ThoughtLeadershipSection = () => {
                 </CardContent>
               </Card>
 
-              <Card className="hover-lift border-border bg-card">
+              <Card className="hover-lift border-border bg-card shadow-elegant accent-glow">
                 <CardContent className="p-4 text-center">
                   <h4 className="font-medium mb-3">Leadership</h4>
                   <div className="space-y-1 text-sm text-muted-foreground">

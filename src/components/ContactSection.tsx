@@ -54,14 +54,14 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-hero">
+    <section id="contact" className="py-20 bg-gradient-contact">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-semibold text-white mb-4">
               Let's Work Together
             </h2>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+            <p className="text-lg text-white/80 max-w-3xl mx-auto">
               Ready to drive measurable growth and innovation? I'm always interested in 
               discussing new opportunities and product challenges.
             </p>
@@ -69,9 +69,9 @@ const ContactSection = () => {
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <Card className="animate-fade-in bg-white/10 backdrop-blur-lg border-white/20">
+            <Card className="bg-white/10 backdrop-blur-lg border-white/20 shadow-elegant">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
+                <h3 className="text-xl font-semibold text-white mb-6">Send a Message</h3>
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
@@ -82,7 +82,7 @@ const ContactSection = () => {
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-white/40"
+                        className="bg-white/10 border-white/30 text-white placeholder:text-white/60 focus:border-white/60 focus:bg-white/15"
                       />
                     </div>
                     <div>
@@ -93,7 +93,7 @@ const ContactSection = () => {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-white/40"
+                        className="bg-white/10 border-white/30 text-white placeholder:text-white/60 focus:border-white/60 focus:bg-white/15"
                       />
                     </div>
                   </div>
@@ -103,7 +103,7 @@ const ContactSection = () => {
                     placeholder="Company (Optional)"
                     value={formData.company}
                     onChange={handleInputChange}
-                    className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-white/40"
+                    className="bg-white/10 border-white/30 text-white placeholder:text-white/60 focus:border-white/60 focus:bg-white/15"
                   />
                   
                   <Textarea
@@ -113,19 +113,19 @@ const ContactSection = () => {
                     onChange={handleInputChange}
                     required
                     rows={5}
-                    className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-white/40 resize-none"
+                    className="bg-white/10 border-white/30 text-white placeholder:text-white/60 focus:border-white/60 focus:bg-white/15 resize-none"
                   />
                   
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-white text-primary hover:bg-white/90 hover-scale shadow-glow px-8 py-3 text-lg font-semibold"
+                    className="w-full bg-white text-accent-foreground hover:bg-white/90 font-medium shadow-elegant"
                   >
                     {isSubmitting ? (
                       "Sending..."
                     ) : (
                       <>
-                        <Send className="w-5 h-5 mr-2" />
+                        <Send className="w-4 h-4 mr-2" />
                         Send Message
                       </>
                     )}
@@ -135,13 +135,13 @@ const ContactSection = () => {
             </Card>
 
             {/* Contact Info */}
-            <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <h3 className="text-2xl font-bold text-white mb-8">Get In Touch</h3>
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-8">Get In Touch</h3>
               
               <div className="space-y-6">
                 {contactInfo.map((item, index) => (
                   <div key={index} className="flex items-center gap-4 group">
-                    <div className="p-3 bg-white/10 rounded-xl text-white group-hover:bg-white/20 transition-colors">
+                    <div className="p-3 bg-white/10 rounded-lg text-white group-hover:bg-white/20 transition-colors">
                       {item.icon}
                     </div>
                     <div>
@@ -163,25 +163,25 @@ const ContactSection = () => {
                 ))}
               </div>
 
-              <div className="mt-12 p-6 bg-white/10 rounded-xl backdrop-blur-lg">
-                <h4 className="text-lg font-semibold text-white mb-3">
+              <div className="mt-12 p-6 bg-white/10 rounded-lg backdrop-blur-lg">
+                <h4 className="text-lg font-medium text-white mb-4">
                   Currently Available For
                 </h4>
-                <ul className="space-y-2 text-white/80">
-                  <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
+                <ul className="space-y-3 text-white/80">
+                  <li className="flex items-center gap-3">
+                    <div className="accent-dot"></div>
                     Senior Product Management roles
                   </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
+                  <li className="flex items-center gap-3">
+                    <div className="accent-dot"></div>
                     AI-first product leadership
                   </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
+                  <li className="flex items-center gap-3">
+                    <div className="accent-dot"></div>
                     Strategic product consulting
                   </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
+                  <li className="flex items-center gap-3">
+                    <div className="accent-dot"></div>
                     Speaking engagements
                   </li>
                 </ul>

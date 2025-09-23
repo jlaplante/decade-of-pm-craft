@@ -106,7 +106,7 @@ const ExperienceSection = () => {
             {experiences.map((exp, index) => (
               <Card 
                 key={exp.id} 
-                className="overflow-hidden hover-lift cursor-pointer border-border bg-card"
+                className="overflow-hidden hover-lift cursor-pointer border-border bg-card shadow-elegant"
                 onClick={() => handleCardClick(exp.id)}
               >
                 <CardContent className="p-8">
@@ -114,7 +114,7 @@ const ExperienceSection = () => {
                     {/* Company & Role Info */}
                     <div className="lg:col-span-2 space-y-4">
                       <div className="flex items-start gap-4">
-                        <div className={`p-2 rounded-lg text-primary bg-primary/10`}>
+                        <div className={`p-2 rounded-lg text-primary bg-accent accent-glow`}>
                           {exp.icon}
                         </div>
                         <div className="flex-1">

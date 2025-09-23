@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* Modern Minimalist Design System for Jon La Plante Portfolio
-Clean, functional design with subtle accents. All colors MUST be HSL.
+Clean, functional design with strategic color accents. All colors MUST be HSL.
 */
 
 @layer base {
@@ -17,13 +17,13 @@ Clean, functional design with subtle accents. All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 215 25% 27%;
 
-    /* Clean primary - Professional blue */
+    /* Sophisticated primary - Professional blue with depth */
     --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
     
-    /* Subtle accent - Neutral gray */
-    --accent: 210 6% 93%;
-    --accent-foreground: 215 25% 27%;
+    /* Strategic accent - Sophisticated teal for highlights */
+    --accent: 195 100% 95%;
+    --accent-foreground: 197 37% 24%;
 
     --secondary: 210 6% 93%;
     --secondary-foreground: 215 25% 27%;
@@ -37,6 +37,12 @@ Clean, functional design with subtle accents. All colors MUST be HSL.
     --border: 217 12% 84%;
     --input: 217 12% 84%;
     --ring: 217 91% 60%;
+
+    /* Beautiful gradient for special sections */
+    --gradient-contact: linear-gradient(135deg, hsl(197 37% 24%), hsl(215 25% 27%));
+    
+    /* Sophisticated shadows */
+    --shadow-elegant: 0 4px 20px -4px hsl(217 91% 60% / 0.1);
     
     /* Typography */
     --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -74,8 +80,8 @@ Clean, functional design with subtle accents. All colors MUST be HSL.
     --primary: 217 91% 70%;
     --primary-foreground: 215 28% 17%;
     
-    --accent: 215 28% 22%;
-    --accent-foreground: 210 20% 98%;
+    --accent: 197 37% 24%;
+    --accent-foreground: 195 100% 95%;
 
     --secondary: 215 28% 22%;
     --secondary-foreground: 210 20% 98%;
@@ -89,6 +95,9 @@ Clean, functional design with subtle accents. All colors MUST be HSL.
     --border: 215 28% 22%;
     --input: 215 28% 22%;
     --ring: 217 91% 70%;
+
+    --gradient-contact: linear-gradient(135deg, hsl(215 28% 22%), hsl(215 28% 19%));
+    --shadow-elegant: 0 4px 20px -4px hsl(217 91% 70% / 0.2);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -116,16 +125,35 @@ Clean, functional design with subtle accents. All colors MUST be HSL.
 }
 
 @layer components {
+  /* Gradient backgrounds for special sections */
+  .bg-gradient-contact {
+    background: var(--gradient-contact);
+  }
+  
+  /* Elegant shadows */
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  
   /* Interactive elements */
   .story-link {
     @apply relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-px after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-200 hover:after:scale-x-100 hover:after:origin-bottom-left;
   }
   
   .hover-lift {
-    @apply transition-all duration-200 hover:-translate-y-1 hover:shadow-sm;
+    @apply transition-all duration-200 hover:-translate-y-1 hover:shadow-elegant;
   }
   
   .focus-ring {
     @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+  }
+
+  /* Accent highlights */
+  .accent-dot {
+    @apply w-2 h-2 bg-primary rounded-full;
+  }
+  
+  .accent-glow {
+    @apply ring-1 ring-primary/20 bg-primary/5;
   }
 }
