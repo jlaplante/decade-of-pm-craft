@@ -40,18 +40,6 @@ const ContactSection = () => {
 
   const contactInfo = [
     {
-      icon: <Mail className="w-5 h-5" />,
-      label: "Email",
-      value: "jon.laplante@jonlaplante.com",
-      href: "mailto:jon.laplante@jonlaplante.com"
-    },
-    {
-      icon: <Phone className="w-5 h-5" />,
-      label: "Phone",
-      value: "+420 775 263 881",
-      href: "tel:+420775263881"
-    },
-    {
       icon: <MapPin className="w-5 h-5" />,
       label: "Location",
       value: "Prague, Czechia",
