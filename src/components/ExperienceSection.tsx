@@ -30,8 +30,7 @@ const ExperienceSection = () => {
         "Full product lifecycle ownership as Product Owner & Scrum Master"
       ],
       metrics: [],
-      icon: <Zap className="w-6 h-6" />,
-      gradient: "bg-gradient-primary"
+      icon: <Zap className="w-5 h-5" />
     },
     {
       id: "accionlabs-veracode",
@@ -47,8 +46,7 @@ const ExperienceSection = () => {
         "Led remote teams across US and Prague, CZ"
       ],
       metrics: [],
-      icon: <Award className="w-6 h-6" />,
-      gradient: "bg-gradient-accent"
+      icon: <Award className="w-5 h-5" />
     },
     {
       id: "msd",
@@ -68,8 +66,7 @@ const ExperienceSection = () => {
         { label: "Employee Engagement", value: "~30% increase", change: "in articles read" },
         { label: "Execution Time", value: "50% reduction", change: "performance boost" }
       ],
-      icon: <TrendingUp className="w-6 h-6" />,
-      gradient: "bg-gradient-primary"
+      icon: <TrendingUp className="w-5 h-5" />
     },
     {
       id: "everli",
@@ -87,31 +84,29 @@ const ExperienceSection = () => {
       metrics: [
         { label: "Integration Time", value: "30% reduction", change: "2+ weeks saved" }
       ],
-      icon: <Users className="w-6 h-6" />,
-      gradient: "bg-gradient-accent"
+      icon: <Users className="w-5 h-5" />
     }
   ];
 
   return (
-    <section id="experience" className="py-20 bg-muted/30">
+    <section id="experience" className="py-20 bg-muted">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-semibold mb-4">
               Experience & Impact
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               A decade of driving measurable growth, leading cross-functional teams, 
               and delivering products that scale from startups to enterprise.
             </p>
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-6">
             {experiences.map((exp, index) => (
               <Card 
                 key={exp.id} 
-                className="overflow-hidden hover-scale bg-gradient-card border-0 shadow-primary animate-fade-in cursor-pointer transition-all duration-200 hover:shadow-accent"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="overflow-hidden hover-lift cursor-pointer border-border bg-card"
                 onClick={() => handleCardClick(exp.id)}
               >
                 <CardContent className="p-8">
@@ -119,22 +114,22 @@ const ExperienceSection = () => {
                     {/* Company & Role Info */}
                     <div className="lg:col-span-2 space-y-4">
                       <div className="flex items-start gap-4">
-                        <div className={`p-3 rounded-xl text-white ${exp.gradient}`}>
+                        <div className={`p-2 rounded-lg text-primary bg-primary/10`}>
                           {exp.icon}
                         </div>
                         <div className="flex-1">
                           <div className="flex items-center gap-3 mb-2">
-                            <Badge variant="secondary" className="font-medium">
+                            <Badge variant="secondary" className="text-xs">
                               {exp.type}
                             </Badge>
-                            <Badge variant="outline" className="text-xs bg-accent/10 text-accent border-accent/20">
+                            <Badge variant="outline" className="text-xs">
                               Click for details
                             </Badge>
                           </div>
-                          <h3 className="text-2xl font-bold text-foreground mb-1">
+                          <h3 className="text-xl font-semibold text-foreground mb-1">
                             {exp.role}
                           </h3>
-                          <h4 className="text-xl font-semibold text-primary mb-3">
+                          <h4 className="text-lg font-medium text-primary mb-3">
                             {exp.company}
                           </h4>
                           <div className="flex items-center gap-4 text-muted-foreground">
@@ -158,10 +153,10 @@ const ExperienceSection = () => {
                     {/* Highlights & Metrics */}
                     <div className="lg:col-span-2 space-y-6">
                       <div>
-                        <h5 className="font-semibold text-foreground mb-3">Key Achievements</h5>
+                        <h5 className="font-medium text-foreground mb-3">Key Achievements</h5>
                         <ul className="space-y-2">
                           {exp.highlights.map((highlight, idx) => (
-                            <li key={idx} className="flex items-start gap-2 text-muted-foreground">
+                            <li key={idx} className="flex items-start gap-2 text-muted-foreground text-sm">
                               <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                               <span>{highlight}</span>
                             </li>
@@ -171,18 +166,18 @@ const ExperienceSection = () => {
 
                       {exp.metrics.length > 0 && (
                         <div>
-                          <h5 className="font-semibold text-foreground mb-3">Measurable Impact</h5>
+                          <h5 className="font-medium text-foreground mb-3">Measurable Impact</h5>
                           <div className="space-y-3">
                             {exp.metrics.map((metric, idx) => (
-                              <div key={idx} className="bg-background/50 rounded-lg p-4">
-                                <div className="text-sm text-muted-foreground mb-1">
+                              <div key={idx} className="bg-muted/50 rounded-lg p-3">
+                                <div className="text-xs text-muted-foreground mb-1">
                                   {metric.label}
                                 </div>
                                 <div className="flex items-center justify-between">
-                                  <span className="text-2xl font-bold text-primary">
+                                  <span className="text-lg font-semibold text-primary">
                                     {metric.value}
                                   </span>
-                                  <Badge variant="outline" className="text-green-600 border-green-200">
+                                  <Badge variant="outline" className="text-xs text-green-700 border-green-200">
                                     {metric.change}
                                   </Badge>
                                 </div>

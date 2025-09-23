@@ -52,11 +52,11 @@ const ThoughtLeadershipSection = () => {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-semibold mb-4">
               Thought Leadership
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Sharing knowledge through courses, speaking engagements, and educational content 
               to help grow the next generation of product leaders.
             </p>
@@ -64,31 +64,31 @@ const ThoughtLeadershipSection = () => {
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Courses */}
-            <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div>
               <div className="flex items-center gap-3 mb-8">
-                <div className="p-3 bg-gradient-primary rounded-xl text-white">
-                  <BookOpen className="w-6 h-6" />
+                <div className="p-2 bg-primary/10 rounded-lg text-primary">
+                  <BookOpen className="w-5 h-5" />
                 </div>
-                <h3 className="text-2xl font-bold">Courses Authored</h3>
+                <h3 className="text-xl font-semibold">Courses Authored</h3>
               </div>
               
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {courses.map((course, index) => (
                   <Card 
                     key={index} 
-                    className="hover-scale bg-gradient-card border-0 shadow-primary cursor-pointer transition-all duration-200 hover:shadow-accent"
+                    className="hover-lift cursor-pointer border-border bg-card"
                     onClick={() => window.open(course.url, '_blank', 'noopener,noreferrer')}
                   >
-                    <CardContent className="p-6">
-                      <div className="flex items-start gap-4">
+                    <CardContent className="p-4">
+                      <div className="flex items-start gap-3">
                         <div className="p-2 bg-primary/10 rounded-lg text-primary">
                           {course.icon}
                         </div>
                         <div className="flex-1">
-                          <h4 className="font-semibold text-foreground mb-2 leading-relaxed">
+                          <h4 className="font-medium text-foreground mb-2 leading-relaxed">
                             {course.title}
                           </h4>
-                          <Badge variant="secondary" className="font-medium">
+                          <Badge variant="secondary" className="text-xs">
                             {course.platform}
                           </Badge>
                         </div>
@@ -101,33 +101,33 @@ const ThoughtLeadershipSection = () => {
             </div>
 
             {/* Speaking */}
-            <div className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <div>
               <div className="flex items-center gap-3 mb-8">
-                <div className="p-3 bg-gradient-accent rounded-xl text-white">
-                  <Mic className="w-6 h-6" />
+                <div className="p-2 bg-primary/10 rounded-lg text-primary">
+                  <Mic className="w-5 h-5" />
                 </div>
-                <h3 className="text-2xl font-bold">Conference Speaking</h3>
+                <h3 className="text-xl font-semibold">Conference Speaking</h3>
               </div>
               
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {speaking.map((event, index) => (
-                  <Card key={index} className="hover-scale bg-gradient-card border-0 shadow-accent">
-                    <CardContent className="p-6">
+                  <Card key={index} className="hover-lift border-border bg-card">
+                    <CardContent className="p-4">
                       <div className="flex items-start justify-between">
-                        <div className="flex items-start gap-4">
-                          <div className="p-2 bg-accent/10 rounded-lg text-accent">
-                            <Mic className="w-5 h-5" />
+                        <div className="flex items-start gap-3">
+                          <div className="p-2 bg-primary/10 rounded-lg text-primary">
+                            <Mic className="w-4 h-4" />
                           </div>
                           <div>
-                            <h4 className="font-semibold text-foreground mb-2">
+                            <h4 className="font-medium text-foreground mb-1">
                               {event.event}
                             </h4>
-                            <p className="text-muted-foreground">
+                            <p className="text-sm text-muted-foreground">
                               {event.location}
                             </p>
                           </div>
                         </div>
-                        <Badge variant="outline" className="font-medium">
+                        <Badge variant="outline" className="text-xs">
                           {event.year}
                         </Badge>
                       </div>
@@ -139,14 +139,14 @@ const ThoughtLeadershipSection = () => {
           </div>
 
           {/* Skills */}
-          <div className="mt-16 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-            <h3 className="text-2xl font-bold mb-8 text-center">Core Skills</h3>
+          <div className="mt-16">
+            <h3 className="text-xl font-semibold mb-8 text-center">Core Skills</h3>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Card className="hover-scale bg-gradient-card border-0 shadow-primary">
-                <CardContent className="p-6 text-center">
-                  <h4 className="font-semibold mb-3">AI & Development</h4>
-                  <div className="space-y-2 text-sm text-muted-foreground">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <Card className="hover-lift border-border bg-card">
+                <CardContent className="p-4 text-center">
+                  <h4 className="font-medium mb-3">AI & Development</h4>
+                  <div className="space-y-1 text-sm text-muted-foreground">
                     <div>GenAI & LLMs</div>
                     <div>Prompt Engineering</div>
                     <div>AWS Bedrock</div>
@@ -155,10 +155,10 @@ const ThoughtLeadershipSection = () => {
                 </CardContent>
               </Card>
 
-              <Card className="hover-scale bg-gradient-card border-0 shadow-primary">
-                <CardContent className="p-6 text-center">
-                  <h4 className="font-semibold mb-3">Product Management</h4>
-                  <div className="space-y-2 text-sm text-muted-foreground">
+              <Card className="hover-lift border-border bg-card">
+                <CardContent className="p-4 text-center">
+                  <h4 className="font-medium mb-3">Product Management</h4>
+                  <div className="space-y-1 text-sm text-muted-foreground">
                     <div>Roadmap Planning</div>
                     <div>Backlog Management</div>
                     <div>KPIs & OKRs</div>
@@ -167,10 +167,10 @@ const ThoughtLeadershipSection = () => {
                 </CardContent>
               </Card>
 
-              <Card className="hover-scale bg-gradient-card border-0 shadow-primary">
-                <CardContent className="p-6 text-center">
-                  <h4 className="font-semibold mb-3">Technical Skills</h4>
-                  <div className="space-y-2 text-sm text-muted-foreground">
+              <Card className="hover-lift border-border bg-card">
+                <CardContent className="p-4 text-center">
+                  <h4 className="font-medium mb-3">Technical Skills</h4>
+                  <div className="space-y-1 text-sm text-muted-foreground">
                     <div>SQL & Databases</div>
                     <div>Ruby on Rails</div>
                     <div>JavaScript/Node.js</div>
@@ -179,10 +179,10 @@ const ThoughtLeadershipSection = () => {
                 </CardContent>
               </Card>
 
-              <Card className="hover-scale bg-gradient-card border-0 shadow-primary">
-                <CardContent className="p-6 text-center">
-                  <h4 className="font-semibold mb-3">Leadership</h4>
-                  <div className="space-y-2 text-sm text-muted-foreground">
+              <Card className="hover-lift border-border bg-card">
+                <CardContent className="p-4 text-center">
+                  <h4 className="font-medium mb-3">Leadership</h4>
+                  <div className="space-y-1 text-sm text-muted-foreground">
                     <div>Public Speaking</div>
                     <div>Team Mentoring</div>
                     <div>Data Analysis</div>
@@ -194,34 +194,34 @@ const ThoughtLeadershipSection = () => {
           </div>
 
           {/* Certifications */}
-          <div className="mt-16 animate-fade-in" style={{ animationDelay: '0.8s' }}>
-            <h3 className="text-2xl font-bold mb-8 text-center">Certifications</h3>
+          <div className="mt-16">
+            <h3 className="text-xl font-semibold mb-8 text-center">Certifications</h3>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              <Card className="hover-scale bg-gradient-card border-0 shadow-accent">
-                <CardContent className="p-6 text-center">
-                  <h4 className="font-semibold mb-3">AWS Certified</h4>
-                  <div className="space-y-2 text-sm text-muted-foreground">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+              <Card className="hover-lift border-border bg-card">
+                <CardContent className="p-4 text-center">
+                  <h4 className="font-medium mb-3">AWS Certified</h4>
+                  <div className="space-y-1 text-sm text-muted-foreground">
                     <div>Cloud Practitioner</div>
                     <div>Solutions Architect</div>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="hover-scale bg-gradient-card border-0 shadow-accent">
-                <CardContent className="p-6 text-center">
-                  <h4 className="font-semibold mb-3">Product Management</h4>
-                  <div className="space-y-2 text-sm text-muted-foreground">
+              <Card className="hover-lift border-border bg-card">
+                <CardContent className="p-4 text-center">
+                  <h4 className="font-medium mb-3">Product Management</h4>
+                  <div className="space-y-1 text-sm text-muted-foreground">
                     <div>Certified Scrum Master</div>
                     <div>Agile Product Owner</div>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="hover-scale bg-gradient-card border-0 shadow-accent">
-                <CardContent className="p-6 text-center">
-                  <h4 className="font-semibold mb-3">Education</h4>
-                  <div className="space-y-2 text-sm text-muted-foreground">
+              <Card className="hover-lift border-border bg-card">
+                <CardContent className="p-4 text-center">
+                  <h4 className="font-medium mb-3">Education</h4>
+                  <div className="space-y-1 text-sm text-muted-foreground">
                     <div>Course Instructor</div>
                     <div>Content Creator</div>
                   </div>

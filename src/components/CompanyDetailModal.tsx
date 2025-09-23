@@ -34,10 +34,10 @@ const CompanyDetailModal = ({ isOpen, onClose, company, role }: CompanyDetailMod
                 Company Overview
               </h3>
               
-              <Card className="bg-gradient-card border-0 shadow-primary">
+              <Card className="border-border bg-card">
                 <CardContent className="p-6 space-y-4">
                   <div>
-                    <Badge variant="secondary" className="mb-3 font-medium">
+                    <Badge variant="secondary" className="mb-3 text-xs">
                       {company.type}
                     </Badge>
                     <p className="text-muted-foreground leading-relaxed">
@@ -90,7 +90,7 @@ const CompanyDetailModal = ({ isOpen, onClose, company, role }: CompanyDetailMod
             </div>
 
             <div>
-              <h4 className="font-semibold mb-3">Key Company Facts</h4>
+              <h4 className="font-medium mb-3">Key Company Facts</h4>
               <ul className="space-y-2">
                 {company.keyFacts.map((fact, index) => (
                   <li key={index} className="flex items-start gap-2 text-sm">
@@ -110,10 +110,10 @@ const CompanyDetailModal = ({ isOpen, onClose, company, role }: CompanyDetailMod
                 My Role & Impact
               </h3>
               
-              <Card className="bg-gradient-card border-0 shadow-accent">
+              <Card className="border-border bg-card">
                 <CardContent className="p-6 space-y-4">
                   <div>
-                    <h4 className="text-lg font-semibold text-foreground mb-1">
+                    <h4 className="text-lg font-medium text-foreground mb-1">
                       {role.role}
                     </h4>
                     <div className="flex items-center gap-2 text-muted-foreground mb-3">
@@ -129,7 +129,7 @@ const CompanyDetailModal = ({ isOpen, onClose, company, role }: CompanyDetailMod
             </div>
 
             <div>
-              <h4 className="font-semibold mb-3 flex items-center gap-2">
+              <h4 className="font-medium mb-3 flex items-center gap-2">
                 <Target className="w-4 h-4 text-primary" />
                 Key Contributions
               </h4>
@@ -146,8 +146,8 @@ const CompanyDetailModal = ({ isOpen, onClose, company, role }: CompanyDetailMod
             <Separator />
 
             <div>
-              <h4 className="font-semibold mb-3 flex items-center gap-2">
-                <Trophy className="w-4 h-4 text-accent" />
+              <h4 className="font-medium mb-3 flex items-center gap-2">
+                <Trophy className="w-4 h-4 text-primary" />
                 Challenges & Outcomes
               </h4>
               
@@ -169,7 +169,7 @@ const CompanyDetailModal = ({ isOpen, onClose, company, role }: CompanyDetailMod
                   <ul className="space-y-1">
                     {role.outcomes.map((outcome, index) => (
                       <li key={index} className="flex items-start gap-2 text-sm">
-                        <div className="w-1 h-1 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                        <div className="w-1 h-1 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                         <span className="text-muted-foreground">{outcome}</span>
                       </li>
                     ))}
@@ -180,7 +180,7 @@ const CompanyDetailModal = ({ isOpen, onClose, company, role }: CompanyDetailMod
 
             {role.technologies.length > 0 && (
               <div>
-                <h4 className="font-semibold mb-3">Technologies & Tools</h4>
+                <h4 className="font-medium mb-3">Technologies & Tools</h4>
                 <div className="flex flex-wrap gap-2">
                   {role.technologies.map((tech, index) => (
                     <Badge key={index} variant="outline" className="text-xs">
