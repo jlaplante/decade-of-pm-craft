@@ -6,6 +6,15 @@
 Clean, functional design with strategic color accents. All colors MUST be HSL.
 */
 
+/* Local font: FKGroteskNeue */
+@font-face {
+  font-family: 'FKGroteskNeue';
+  src: url('/fonts/FKGroteskNeue.woff2') format('woff2');
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -45,8 +54,8 @@ Clean, functional design with strategic color accents. All colors MUST be HSL.
     --shadow-elegant: 0 4px 20px -4px hsl(217 91% 60% / 0.1);
     
     /* Typography */
-    --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-heading: 'FKGroteskNeue', -apple-system, BlinkMacSystemFont, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    --font-body: 'FKGroteskNeue', -apple-system, BlinkMacSystemFont, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 
     --radius: 0.5rem;
 
@@ -116,11 +125,11 @@ Clean, functional design with strategic color accents. All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-body);
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-heading);
   }
 }
 
