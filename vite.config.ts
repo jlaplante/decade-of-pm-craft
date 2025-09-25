@@ -5,8 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/',
-  // base: mode === 'production' ? '/decade-of-pm-craft/' : '/',
+  base: '/decade-of-pm-craft/',
   build: {
     outDir: 'dist',
   },
