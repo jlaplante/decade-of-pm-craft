@@ -27,15 +27,42 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission (replace with actual form handler)
-    setTimeout(() => {
-      toast({
-        title: "Message sent successfully!",
-        description: "Thank you for your interest. I'll get back to you within 24 hours.",
+    try {
+      const response = await fetch('https://formspree.io/f/xvgwgyyv', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
-      setFormData({ name: '', email: '', company: '', message: '' });
+
+      if (response.ok) {
+        toast({
+          title: "Message sent successfully!",
+          description: "Thank you for your interest. I'll get back to you within 24 hours.",
+        });
+        setFormData({ name: '', email: '', company: '', message: '' });
+      } else {
+        // Handle different error status codes
+        const errorData = await response.json().catch(() => ({}));
+        const errorMessage = errorData.errors?.[0] || 'Something went wrong. Please try again.';
+        
+        toast({
+          title: "Failed to send message",
+          description: errorMessage,
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast({
+        title: "Network error",
+        description: "Please check your connection and try again.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const contactInfo = [
